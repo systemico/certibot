@@ -63,7 +63,6 @@ def check():
     cont = 1
     print("-------------------------------------------------------------------------------------")
     for hostname in domains:
-        hostname=hostname.rstrip()
         longitud=len(hostname)
         max=40
         error=0
@@ -87,9 +86,9 @@ def check():
         except Exception:
             error=1
 
-        if error==1:
-            print(COLOR.FAIL + "    WARNING!:" + COLOR.ENDC + "No se pudo analizar. " + COLOR.ENDC + "   |")
-        elif remaining <= num_days:
+        #if error==1:
+        #    print(COLOR.FAIL + "    WARNING!:" + COLOR.ENDC + "No se pudo analizar el dominio." + COLOR.ENDC + "   |")
+        if remaining <= num_days:
             print(COLOR.FAIL+"    ALERTA!:"+COLOR.ENDC+"El dominio vence en "+COLOR.FAIL+str(remaining)+COLOR.ENDC+"   |")
         else:
             print(COLOR.OKGREEN+"         OK, faltan " + str(remaining) + " días  "+ COLOR.ENDC+"        |")

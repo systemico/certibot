@@ -5,8 +5,9 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="certibot",
-    version="0.0.1",
+    version="0.0.2",
     author="Systemico Software S.A.S",
+    scripts=['start.py'],
     author_email="edwin.ariza@systemico.co",
     description="Script to validate the corporative or personal domains to get information about ssl certificates, and other more options.",
     long_description=long_description,

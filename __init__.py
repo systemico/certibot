@@ -1,1 +1,1 @@
-name = "systemico.certibot"
+name = "certibot"
